@@ -1,0 +1,121 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    width: 100%;
+    height: 100%;
+    background-color: #7f939e;
+  
+}
+
+.game{
+    width: 100%;
+    height: 720px;
+    display: flexbox;
+    justify-content: space-around;
+    gap: 3rem;
+}
+.gameHeading{
+    display: flex;
+    justify-content: center;
+    justify-self: center;
+    width: 30rem;
+    height: 6rem;
+    background-color: darkslategrey;
+    position: relative;
+    top: 4rem;
+    left: 1.4rem;
+    
+}
+h1{
+    color:cornsilk;
+    font-size: 3rem;
+    position: relative;
+    top: 1.4rem;
+}
+
+
+
+
+.img1{
+    color: cornsilk;
+    font-size: 24px;
+    display: flex;
+    height: 300px;
+    width: 300px;
+    position: relative;
+    left: 230px;
+    top: 120px;
+    gap: 2rem;
+  
+    
+}
+
+.img2{
+    color: cornsilk;
+    font-size: 24px;
+    display: flex;
+    height: 300px;
+    width: 300px;
+    position: relative;
+    left: 670px;
+    bottom: 180px;
+    gap: 2rem;
+
+}
+.cM{
+    color: cornsilk;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12rem;
+    position: relative;
+    bottom: 150px;
+}
+
+/* button style */
+.Choices{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    position: relative;
+    bottom: 140px;
+}
+.choice{
+    height: 90px;
+    width: 90px;
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    overflow: hidden;
+    object-fit: cover;
+    border-radius: 60%;
+}
+.images{
+    height: 90px;
+    width: 90px;
+    
+}
+/* scoreboard */
+.scoreboard{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 5rem;
+    gap: 5rem;
+    height: fit-content;
+}
+
+
+.playAgain{
+    color: cornsilk;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem;
+}
