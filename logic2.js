@@ -1,5 +1,6 @@
 // accesing elements from play.html
 
+message=document.querySelector(".message");
 yScore=document.querySelector(".yScore");
 cScore=document.querySelector(".cScore");
 uScore=document.querySelector(".uScore");
@@ -8,9 +9,11 @@ img1=document.querySelector(".img1");
 img2=document.querySelector(".img2");
 image1=document.querySelector(".image1");
 image2=document.querySelector(".image2");
-cM=document.querySelector(".cM");
+cM=document.querySelectorAll(".cM");
 choice=document.querySelectorAll(".choice");
+playAgainBtn=document.querySelector(".Choices")
 chImages=document.querySelector(".chImages");
+
 
 // initializing scores
 let s1=0;
@@ -26,18 +29,15 @@ playAgain.style.padding="2rem";
 playAgain.style.paddingLeft="4rem";
 playAgain.style.paddingRight="4rem";
 playAgain.style.borderRadius="20px";
-playAgain.style.position="relative";
-playAgain.style.left="530px";
-playAgain.style.top="200px";
 playAgain.style.fontSize="22px";
 
 // creating result message and styling
 let rMessage=document.createElement("p");
 rMessage.style.color="cornsilk";
-rMessage.style.fontSize="24px";
-rMessage.style.position="relative";
-rMessage.style.top="30px";
-rMessage.style.left="545px";
+rMessage.style.fontSize="2rem";
+
+
+
 
 
 
@@ -67,13 +67,15 @@ let botChoice=()=>{
 let result=()=>{
     img1.remove();
     img2.remove();
-    cM.remove();
+    for(cm of cM){
+        cm.remove();
+    }
+    
     for (c of choice){
         c.remove();
     }
-    
-    chImages.prepend(rMessage);
-    chImages.prepend(playAgain);
+    message.appendChild(rMessage);
+    playAgainBtn.appendChild(playAgain);
     
 }
 
@@ -84,8 +86,10 @@ let choose;
 
 let play=(e)=>{
     cBot=botChoice();
-    image1.style.width="300px";
-    image2.style.width="300px";
+    image1.style.width="15rem";
+    image2.style.width="15rem";
+    image1.style.height="15rem";
+    image2.style.height="15rem";
     let attribute=e.target.getAttribute("id");
     
     if(attribute=="rock" && cBot=="rock"){

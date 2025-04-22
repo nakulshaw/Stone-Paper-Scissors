@@ -4,102 +4,124 @@
 }
 
 .container{
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     background-color: #7f939e;
-  
+    
 }
 
 .game{
-    width: 100%;
-    height: 720px;
-    display: flexbox;
+    margin: auto;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
     justify-content: space-around;
-    gap: 3rem;
+    justify-items: center;
+    align-items: center;
+    
 }
 .gameHeading{
+    background-color: darkslategrey;
     display: flex;
     justify-content: center;
     justify-self: center;
+    align-items:center;
+    flex-wrap: wrap;
     width: 30rem;
     height: 6rem;
-    background-color: darkslategrey;
-    position: relative;
-    top: 4rem;
-    left: 1.4rem;
+    position: sticky;
+    top: 1.5rem;
+    
     
 }
 h1{
     color:cornsilk;
     font-size: 3rem;
-    position: relative;
-    top: 1.4rem;
+    
+}
+.cM{
+    color: cornsilk;
+    font-size: 1.6rem;
+    /* display: flex;
+    justify-content: start; */
+   
 }
 
-
-
-
-.img1{
-    color: cornsilk;
-    font-size: 24px;
+.chImages{
     display: flex;
-    height: 300px;
-    width: 300px;
-    position: relative;
-    left: 230px;
-    top: 120px;
-    gap: 2rem;
+    justify-content: space-between;
+    justify-items: center;
+    
+    
+}
+
+.userBoard{
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+}
+.compBoard{
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+}
+.userScore{
+    color: cornsilk;
+    font-size: 1.5rem;
+}
+.compScore{
+    color: cornsilk;
+    font-size: 1.5rem;
+}
+
+.image1{
+    
+    /* display: flex; */
+    height: 15rem;
+    width: 15rem;
+    border-radius: 1rem;
+    /* position: sticky; */
+    
+    
   
     
 }
 
-.img2{
-    color: cornsilk;
-    font-size: 24px;
-    display: flex;
-    height: 300px;
-    width: 300px;
-    position: relative;
-    left: 670px;
-    bottom: 180px;
-    gap: 2rem;
+.image2{
+    
+    /* display: flex; */
+    height: 15rem;
+    width: 15rem;
+    border-radius: 1rem;
+    /* position: sticky; */
 
 }
-.cM{
-    color: cornsilk;
-    font-size: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 12rem;
-    position: relative;
-    bottom: 150px;
-}
+
+
 
 /* button style */
 .Choices{
     display: flex;
-    justify-content: center;
-    align-items: center;
     gap: 3rem;
-    position: relative;
-    bottom: 140px;
+    
 }
 .choice{
-    height: 90px;
-    width: 90px;
+    height: 5.5rem;
+    width: 5.5rem;
     display: flex; 
     align-items: center; 
     justify-content: center; 
-    overflow: hidden;
+    overflow:hidden;
     object-fit: cover;
     border-radius: 60%;
 }
 .images{
-    height: 90px;
-    width: 90px;
+    height: 5.5rem;
+    width: 5.5rem;
     
 }
+
 /* scoreboard */
 .scoreboard{
     display: flex;
@@ -118,4 +140,39 @@ h1{
     justify-content: center;
     align-items: center;
     padding: 3rem;
+}
+
+/* handling screen sizes */
+@media (max-width:550px){
+    html, body {
+        width: 100vw;
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+    }
+    
+    .container {
+        position: fixed;
+        width: 100vh; /* Swap width & height intentionally */
+        height: 100vw;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%) rotate(90deg) ; /* Centers & rotates */
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        background-color: #7f939e;
+    }
+    .game{
+        position: fixed;
+        width: 100vh; /* Swap width & height intentionally */
+        height: 100vw;
+        transform: scale(0.6);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 }
